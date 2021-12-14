@@ -15,6 +15,13 @@ struct AddUpdateSong: View {
     
     var body: some View {
         VStack {
+            Text(viewModel.textDescription)
+                .fontWeight(.bold)
+                .font(.largeTitle)
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 50.0)
+                .padding(.leading, 10.0)
+                .padding(.trailing, 10.0)
             TextField("song title", text: $viewModel.songTitle)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
@@ -25,6 +32,7 @@ struct AddUpdateSong: View {
             } label: {
                 Text(viewModel.buttonTitle)
             }
+            .padding(.top, 10.0)
         }
     }
 }

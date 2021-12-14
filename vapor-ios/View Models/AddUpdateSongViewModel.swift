@@ -22,6 +22,10 @@ final class AddUpdateSongViewModel: ObservableObject {
         songID != nil ? "Update Song" : "Add Song"
     }
     
+    var textDescription: String {
+        songID != nil ? "Update the name of your song ✨" : "Add a song to your list! 😍"
+    }
+    
     // if we are creating a new song, then we can use a blank initializer
     init() { }
     
